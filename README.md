@@ -10,36 +10,36 @@ Installation
 -------------
 
 Through [NPM](http://www.npmjs.org) - working on adding to the Registry
-	``` bash
-	$ npm install https://github.com/treygriffith/cellar.git
-	```
+``` bash
+$ npm install https://github.com/treygriffith/cellar.git
+```
 
  or using Git
-	``` bash
-	$ git clone git://github.com/treygriffith/cellar.git node_modules/cellar/
-	```
+``` bash
+$ git clone git://github.com/treygriffith/cellar.git node_modules/cellar/
+```
 
 API/How to Use
 -----------
 
 #### Instantiate Cellar with a collection name, mongoDB details or a Mongoose instance, and a schema
 
-	``` javascript
-	// with Mongoose and Mongoose Schema
+``` javascript
+// with Mongoose and Mongoose Schema
 
-	var mongoose = require('mongoose');
-	var mongoUrl = 'mongodb://' + db.user + ':' + db.pass + '@' + db.host + ':' + db.port + '/' + db.name;
-	mongoose.connect(mongoUrl);
+var mongoose = require('mongoose');
+var mongoUrl = 'mongodb://' + db.user + ':' + db.pass + '@' + db.host + ':' + db.port + '/' + db.name;
+mongoose.connect(mongoUrl);
 
-	var myschema = mongoose.Schema({hello: String, stored_by: String});
+var myschema = mongoose.Schema({hello: String, stored_by: String});
 
-	var cellar = new Cellar('mystore', mongoose, myschema, {maxAge:3});
+var cellar = new Cellar('mystore', mongoose, myschema, {maxAge:3});
 
 
-	// with mongoDB details and object literal of Schema (maxAge of -1 stores docs forever)
+// with mongoDB details and object literal of Schema (maxAge of -1 stores docs forever)
 
-	var cellar = new Cellar('mystore', {user:db.user, pass:db.pass, host:db.host, port:db.port, name:db.name}, {hello: String, stored_by: String}, {maxAge:-1});
-	```
+var cellar = new Cellar('mystore', {user:db.user, pass:db.pass, host:db.host, port:db.port, name:db.name}, {hello: String, stored_by: String}, {maxAge:-1});
+```
 
 #### Cellar exposes 3 methods:
 
