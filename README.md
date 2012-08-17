@@ -21,7 +21,7 @@ Through [NPM](http://www.npmjs.org) - working on adding to the Registry
 
 API/How to Use
 -----------
-Instantiate Cellar with a collection name, mongoDB details or a Mongoose instance, and a schema
+## Instantiate Cellar with a collection name, mongoDB details or a Mongoose instance, and a schema
 	``` javascript
 	// with Mongoose and Mongoose Schema
 
@@ -39,7 +39,8 @@ Instantiate Cellar with a collection name, mongoDB details or a Mongoose instanc
 	var cellar = new Cellar('mystore', {user:db.user, pass:db.pass, host:db.host, port:db.port, name:db.name}, {hello: String, stored_by: String}, {maxAge:-1});
 	```
 
-Cellar exposes 3 methods:
+## Cellar exposes 3 methods:
+
 1. `store` - Create and update documents in the collection
 	``` javascript
 	// Create Doc/Insert
