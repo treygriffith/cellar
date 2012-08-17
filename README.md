@@ -78,7 +78,7 @@ var cellar = new Cellar('mystore', {user:db.user, pass:db.pass, host:db.host, po
 	});
 
 	// Find doc with only 1 field returned
-	cellar.retrieve({stored_by "cellar"}, ["hello"], function(err, doc) {
+	cellar.retrieve({stored_by: "cellar"}, ["hello"], function(err, doc) {
 		if(err) {
 			console.log(err);
 		} else {
@@ -91,7 +91,7 @@ var cellar = new Cellar('mystore', {user:db.user, pass:db.pass, host:db.host, po
 
 	``` javascript
 	// Find contents of one field
-	cellar.retrieve_field({stored_by "cellar"}, "hello", function(err, hello) {
+	cellar.retrieve_field({stored_by: "cellar"}, "hello", function(err, hello) {
 		function(err, doc) {
 		if(err) {
 			console.log(err);
