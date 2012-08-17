@@ -10,18 +10,20 @@ Installation
 -------------
 
 Through [NPM](http://www.npmjs.org) - working on adding to the Registry
- ``` bash
- $ npm install https://github.com/treygriffith/cellar.git
- ```
+	``` bash
+	$ npm install https://github.com/treygriffith/cellar.git
+	```
 
  or using Git
- ``` bash
- $ git clone git://github.com/treygriffith/cellar.git node_modules/cellar/
- ```
+	``` bash
+	$ git clone git://github.com/treygriffith/cellar.git node_modules/cellar/
+	```
 
 API/How to Use
 -----------
+
 #### Instantiate Cellar with a collection name, mongoDB details or a Mongoose instance, and a schema
+
 	``` javascript
 	// with Mongoose and Mongoose Schema
 
@@ -42,6 +44,7 @@ API/How to Use
 #### Cellar exposes 3 methods:
 
 1. `store` - Create and update documents in the collection
+
 	``` javascript
 	// Create Doc/Insert
 	cellar.store({hello: "world", stored_by: "cellar"}, function(err, doc) {
@@ -61,7 +64,9 @@ API/How to Use
 		}
 	})
 	```
+
 2. `retrieve` - Find and return single documents in the collection
+
 	``` javascript
 	// Find whole doc
 	cellar.retrieve({stored_by: "cellar"}, function(err, doc) {
@@ -81,7 +86,9 @@ API/How to Use
 		}
 	});
 	```
+
 3. `retrieve_field` - Find and return the contents of a single field on a single document in the collection
+
 	``` javascript
 	// Find contents of one field
 	cellar.retrieve_field({stored_by "cellar"}, "hello", function(err, hello) {
