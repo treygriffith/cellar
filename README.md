@@ -9,9 +9,9 @@ It's primary purpose is for storage of OAuth tokens and other data that you need
 Installation
 -------------
 
-Through [NPM](http://www.npmjs.org) - working on adding to the Registry
+Through [NPM](http://www.npmjs.org)
 ``` bash
-$ npm install https://github.com/treygriffith/cellar.git
+$ npm install cellar
 ```
 
  or using Git
