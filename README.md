@@ -56,6 +56,7 @@ var cellar = new Cellar('mystore', {user:db.user, pass:db.pass, host:db.host, po
 	});
 
 	// Update existing
+	// As of 0.0.2, this syntax will upsert, resulting in a document of {hello: "planet", stored_by: "cellar"}
 	cellar.store({stored_by: "cellar"}, {hello: "planet"}, function(err, doc) {
 		if(err) {
 			console.log(err);
